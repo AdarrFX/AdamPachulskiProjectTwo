@@ -1,0 +1,517 @@
+$canary: #fdfa69;
+$seaGreen: #4ceea7;
+$siteBlack: #2c2c2c;
+$siteWhite: #fafafa;
+$ice: #effdf3;
+$regularText: 20px;
+
+@import "partials/setup";
+
+@mixin playFairFontBoldItalic {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.fullWrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h3{
+        @include playFairFontBoldItalic();
+        font-size: 42px;
+    }
+
+h4 {
+    @include playFairFontBoldItalic();
+    font-size: 32px;
+}
+
+p {
+    font-family: 'Roboto', serif;
+}
+
+.findOutMoreButton {
+    box-sizing: content-box;
+    background-color: $seaGreen;
+    padding: 10px;
+    @include playFairFontBoldItalic();
+    font-size: 20px;
+    text-decoration: none;
+    color: $siteBlack;
+}
+
+// header section
+
+.mainHeader {
+    background-color: $siteWhite;
+    height: 500px;
+    width: 100%;
+    // max-width: 1600px;
+    background-image: url("../images/header-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $ice;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    text-align: right;
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav li {
+    @include playFairFontBoldItalic();
+    font-size: $regularText;
+    display: inline;
+    margin-left: 30px;
+}
+
+nav a:hover {
+    border-bottom: 3px solid $seaGreen;
+}
+
+.mainHeader h1 {
+    @include playFairFontBoldItalic();
+    font-size: 9vw;
+    text-align: center;
+    position: relative;
+    bottom: -300px;
+    z-index: 1;
+}
+
+.headerLensImageContainer {
+    border-width: 30px 0 30px 30px;
+    border-color: $canary;
+    border-style: solid;
+    width: 40%;
+    min-width: 370px;
+    max-width: 420px;
+    float: right;
+    position: relative;
+    bottom: -70px;
+    // position: absolute;
+    // bottom: -8%;
+    // right: 0;
+}
+
+.headerLensImageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+// What is Captured? section
+
+.whatIsCapturedSection {
+    background-color: $ice;
+    width: 100%;
+    padding: 150px 0;
+}
+
+.whatIsCapturedContent {
+    font-size: $regularText;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+// Skills and gear quadrants 
+
+.skillsAndGearSection {
+    background-color: $siteWhite;
+    width: 100%;
+}
+
+.skillsAndGearSection img {
+    width: 90%;
+    box-shadow: 30px 30px 0 0 $canary;
+    position: relative;
+    top: -30px;
+}
+
+.imageQuadLowerRight {
+    text-align: right;
+}
+
+.skillsAndGearContent {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skillsAndGearQuadrant {
+    width: 50%;
+}
+
+.quadTextWrapper {
+    width: 90%;
+}
+
+.textQuadLowerLeft {
+    padding-left: 7%;
+}
+
+.textQuadLowerLeft .quadTextWrapper{
+    text-align: right;
+}
+
+.imageQuadLowerRight img {
+    box-shadow: -30px 30px 0 0 $canary;
+    margin-bottom: 30px;
+    position: static;
+}
+
+//media icons section
+
+.iconQuadSection i {
+    background-color: $seaGreen;
+    padding: 12px 10px 10px 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.iconQuadSection {
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;
+    background-color: $ice;
+}
+
+.iconQuadContent {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediaContent {
+    margin-left: 15px;
+}
+
+.quadContentMediaWrapper {
+    width: 80%;
+    display: flex;
+}
+
+.mediaIcon {
+    align-items: flex-start;
+}
+
+//banner image across page
+
+.midImageBannerSection {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+//month profile section
+
+.monthProfileSection {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $ice;
+}
+
+.monthProfileContent {
+    width: 85%;
+    display: flex;
+}
+
+.profileTextWrapper {
+    padding-left: 60px;
+
+}
+
+.profileImageContainer {
+    width: 600px;
+}
+
+.profileImageContainer img {
+    width: 100%;
+    box-shadow: 30px 30px 0 0 $canary;
+}
+
+//gallery section
+
+.gallerySection {
+    width: 100%;
+    background-color: $siteWhite;
+    height: 600px;
+}
+
+.gallerySectionContent {
+    width: 85%;
+    display: flex;
+    padding: 80px 0;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.galleryImageWrapper {
+    width: 30%;
+}
+
+.galleryImageWrapper img {
+    width: 100%;
+}
+
+//footer
+
+.pageFooter {
+    width: 100%;
+    height: 50px;
+    background-color: $siteBlack;
+    font-size: $regularText;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+
+//BLOG POST PAGE
+//BLOG POST PAGE
+//BLOG POST PAGE
+
+.blogHeader {
+    background-image: url("../images/blog-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    height: 400px;
+}
+
+.blogContentWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $ice;
+}
+
+//About side box
+.aboutWrapper {
+    width: 28%;
+    line-height: 1.5;
+    margin-top: 40px;
+}
+
+.aboutText{
+    margin-left: 55px;
+    background-color: $siteWhite;
+}
+
+.aboutImage {
+    width: 90%;
+}
+
+.aboutWrapper p {
+    font-family: 'Roboto';
+}
+
+.aboutWrapper h4 {
+    font-size: $regularText;
+}
+
+.recentPostHeading {
+    margin-top: 25px;
+}
+
+.recentPostList {
+    padding-left: 20px;
+}
+
+//Contents of blog post
+$blogImageOffset: 30px;
+
+.blogHeadingText {
+    @include playFairFontBoldItalic();
+    font-size: 70px;
+    position: relative;
+    left: $blogImageOffset;
+    line-height: 0;
+    top: -40px;
+}
+
+
+.blogPostImg {
+    width: 100%;
+    box-shadow: -$blogImageOffset $blogImageOffset 0 0 $canary;
+    position: relative;
+    left: $blogImageOffset;
+    margin-bottom: 14px;
+}
+
+.blogContent {
+    width: 65%;
+    position: relative;
+    top: -150px;
+    margin-right: $blogImageOffset;
+}
+
+.blogTextWrapper {
+    width: 90%;
+    padding-left: 4%;
+    border-left: 4px solid $canary;
+    border-bottom: 4px solid $canary;
+}
+
+.blogTitleHeading {
+    padding-top: 30px;
+}
+
+//blog comments
+
+.blogComment {
+    display:flex;
+    margin: 25px 0;
+}
+
+.blogCommentText {
+    padding-left: 25px;
+}
+
+.blogCommentDate {
+    margin-top: 0;
+}
+
+.commentInputWrapper {
+    width: 100%;
+}
+
+// Input forms used on Blog and Contact pages
+
+.postComment {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.inputField {
+    border: none;
+    border-bottom: 3px solid $seaGreen;
+    padding: 12px 20px;
+    background: none;
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.inputField:hover {
+    background: rgba(211, 134, 211, 0.2);
+}
+
+.nameInputField,
+.emailInputField {
+    width: 45%;
+}
+
+.commentInputField {
+    width: 100%;
+    height: 200px;
+    border: 3px solid $seaGreen;
+    // resize: none;
+}
+
+.postCommentButton {
+    width: 100%;
+    border: none;
+}
+
+//GET IN TOUCH PAGE
+//GET IN TOUCH PAGE
+//GET IN TOUCH PAGE
+
+.inTouchHeader {
+    background-image: url(../images/contact-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    height: 400px;
+}
+
+.inTouchContentWrapper {
+    display: flex;
+    justify-content: space-around;
+    background-color: $ice;
+}
+
+.sideInfoWrapper {
+    width: 25%;
+}
+
+.contactText {
+    position: relative;
+    top: 70px;
+}
+
+.socialIconsWrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.socialIconsWrapper li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.contactText p {
+    line-height: 12px;
+}
+
+.contactText h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.getInTouchFormWrapper {
+    width: 65%;
+    height: 450px;
+    max-width: 650px;
+    background-color: $siteWhite;
+    box-shadow: -$blogImageOffset $blogImageOffset 0 0 $canary;
+    position: relative;
+    top: -160px;
+}
+
+.inTouchTextWrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.getInTouchFormWrapper h3 {
+    position: relative;
+    top: -70px;
+    font-size: 52px;
+}
+
+// MEDIA QUERIES
+
+@import "partials/mediaQueries";
