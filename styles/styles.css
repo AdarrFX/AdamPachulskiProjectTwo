@@ -145,10 +145,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden; }
 
-.fullWrapper {
+body {
+  background-color: #effdf3; }
+
+.wideWrapper {
   margin: 0 auto;
   max-width: 1600px;
   width: 100%; }
+
+.hamburgerMenu.fas {
+  position: absolute;
+  font-size: 50px;
+  top: 50px;
+  right: 30px;
+  display: none; }
 
 h1,
 h2,
@@ -160,13 +170,13 @@ h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 42px; }
+  font-size: 35px; }
 
 h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 32px; }
+  font-size: 26px; }
 
 p {
   font-family: 'Roboto', serif; }
@@ -190,13 +200,16 @@ p {
   background-image: url("../images/header-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #effdf3; }
+  background-color: #effdf3;
+  position: relative; }
 
 nav ul {
   list-style: none;
   margin: 0;
   text-align: right;
-  margin-right: 50px; }
+  position: relative;
+  right: 50px;
+  top: 50px; }
 
 nav a {
   text-decoration: none;
@@ -229,10 +242,10 @@ nav a:hover {
   border-style: solid;
   width: 40%;
   min-width: 370px;
-  max-width: 420px;
-  float: right;
-  position: relative;
-  bottom: -70px; }
+  max-width: 620px;
+  position: absolute;
+  bottom: -23%;
+  right: 0; }
 
 .headerLensImageContainer img {
   width: 100%;
@@ -279,6 +292,9 @@ nav a:hover {
 .skillsAndGearQuadrant {
   width: 50%; }
 
+.skillsAndGearTextQuad {
+  padding-left: 38px; }
+
 .quadTextWrapper {
   width: 90%; }
 
@@ -304,13 +320,14 @@ nav a:hover {
   font-size: 25px; }
 
 .iconQuadSection {
+  background-color: #effdf3; }
+
+.quadSectionWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 450px;
-  background-color: #effdf3; }
+  flex-wrap: wrap; }
 
 .iconQuadContent {
   width: 50%;
@@ -368,7 +385,8 @@ nav a:hover {
   padding-left: 60px; }
 
 .profileImageContainer {
-  width: 600px; }
+  width: 100%;
+  max-width: 400px; }
 
 .profileImageContainer img {
   width: 100%;
@@ -377,8 +395,7 @@ nav a:hover {
 
 .gallerySection {
   width: 100%;
-  background-color: #fafafa;
-  height: 600px; }
+  background-color: #fafafa; }
 
 .gallerySectionContent {
   width: 85%;
@@ -588,26 +605,39 @@ nav a:hover {
   top: -70px;
   font-size: 52px; }
 
+@media (min-width: 1100px) {
+  .mainHeader {
+    height: 650px; }
+  .mainHeader h1 {
+    bottom: -460px;
+    font-size: 120px; }
+  .monthProfileSection {
+    height: 600px; } }
+
 @media (max-width: 950px) {
-  .whatIsCapturedSection {
-    padding: 80px 0; }
+  nav ul {
+    top: 10px; }
   .mainHeader h1 {
     bottom: -70px;
     font-size: 6vw;
     text-align: right;
     margin-right: 50px; }
   .headerLensImageContainer {
-    width: 30%;
+    width: 40%;
     min-width: 250px;
-    bottom: -200px;
-    border-width: 20px 0 20px 20px; } }
+    border-width: 20px 0 20px 20px;
+    bottom: -14%; }
+  .whatIsCapturedSection {
+    padding: 80px 0; } }
 
 @media (max-width: 750px) {
   body {
-    background-color: #F3F5F4; }
+    background-color: #F3F3F3; }
   .mainHeader {
     background-position: 5%;
     margin-top: 80px; }
+  nav ul {
+    right: 10px; }
   .mainHeader h1 {
     font-size: 50px;
     margin: 0;
@@ -623,15 +653,101 @@ nav a:hover {
     margin-right: 25px; }
   nav li {
     display: block;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .skillsAndGearContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .skillsAndGearQuadrant {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+    margin: 35px 0; }
+  .quadTextWrapper {
+    margin: 0 auto; }
+  .textQuadLowerLeft .quadTextWrapper {
+    text-align: center; }
+  .iconQuadSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .iconQuadContent {
+    width: 85%;
+    margin: 15px 0; }
+  .monthProfileSection {
+    height: auto; }
+  .monthProfileContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 90%; }
+  .profileImageContainer {
+    width: 50%;
+    padding: 30px 0; }
+  .profileTextWrapper {
+    text-align: center;
+    padding: 30px 0; }
+  .galleryImageWrapper {
+    width: 48%; }
+  .galleryImageWrapper:nth-of-type(2) {
+    display: none; } }
 
 @media (max-width: 550px) {
   .mainHeader {
     background-image: url("../../images/header-box-image.jpg");
-    background-size: contain;
-    margin: 0; }
+    background-size: cover;
+    margin: 0;
+    background-color: #F3F3F3;
+    background-position: 100%; }
   nav ul {
     display: none; }
   .mainHeader h1 {
     bottom: 0;
-    top: 50px; } }
+    top: 40px;
+    text-align: left;
+    margin-left: 15px; }
+  .hamburgerMenu.fas {
+    display: block; }
+  .whatIsCapturedSection {
+    padding: 50px 0 50px 0; }
+  .skillsAndGearQuadrant {
+    margin: 15px 0; }
+  .midImageBannerSection {
+    display: none; }
+  .monthProfileSection {
+    height: auto; }
+  .gallerySectionContent {
+    width: 90%;
+    padding: 20px 0; }
+  .galleryImageWrapper {
+    width: 85%; }
+  .galleryImageWrapper:nth-of-type(2) {
+    display: block; }
+  .galleryImageWrapper:nth-of-type(2n + 1) {
+    display: none; } }
+
+@media (max-width: 550px) and (max-width: 380px) {
+  .mainHeader h1 {
+    font-size: 40px;
+    margin-left: 10px; }
+  .hamburgerMenu.fas {
+    font-size: 40px;
+    top: 48px;
+    right: 20px; }
+  .profileImageContainer {
+    width: 80%; }
+  .profileImageContainer img {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .profileTextWrapper {
+    padding-top: 0; } }

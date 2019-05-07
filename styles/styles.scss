@@ -13,10 +13,22 @@ $regularText: 20px;
     font-style: italic;
 }
 
-.fullWrapper {
+body {
+    background-color: $ice;
+}
+
+.wideWrapper {
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
+}
+
+.hamburgerMenu.fas {
+    position: absolute;
+    font-size: 50px;
+    top: 50px;
+    right: 30px;
+    display: none;
 }
 
 h1,
@@ -28,12 +40,12 @@ h4 {
 
 h3{
         @include playFairFontBoldItalic();
-        font-size: 42px;
+        font-size: 35px;
     }
 
 h4 {
     @include playFairFontBoldItalic();
-    font-size: 32px;
+    font-size: 26px;
 }
 
 p {
@@ -61,13 +73,16 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $ice;
+    position: relative;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     text-align: right;
-    margin-right: 50px;
+    position: relative;
+    right: 50px;
+    top: 50px;
 }
 
 nav a {
@@ -101,13 +116,13 @@ nav a:hover {
     border-style: solid;
     width: 40%;
     min-width: 370px;
-    max-width: 420px;
-    float: right;
-    position: relative;
-    bottom: -70px;
-    // position: absolute;
-    // bottom: -8%;
-    // right: 0;
+    max-width: 620px;
+    // float: right;
+    // position: relative;
+    // bottom: -70px;
+    position: absolute;
+    bottom: -23%;
+    right: 0;
 }
 
 .headerLensImageContainer img {
@@ -161,6 +176,11 @@ nav a:hover {
     width: 50%;
 }
 
+.skillsAndGearTextQuad {
+    
+    padding-left: 38px;
+}
+
 .quadTextWrapper {
     width: 90%;
 }
@@ -192,10 +212,12 @@ nav a:hover {
 }
 
 .iconQuadSection {
+    background-color: $ice;
+}
+
+.quadSectionWrapper {
     display: flex;
     flex-wrap: wrap;
-    height: 450px;
-    background-color: $ice;
 }
 
 .iconQuadContent {
@@ -249,7 +271,8 @@ nav a:hover {
 }
 
 .profileImageContainer {
-    width: 600px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .profileImageContainer img {
@@ -262,7 +285,6 @@ nav a:hover {
 .gallerySection {
     width: 100%;
     background-color: $siteWhite;
-    height: 600px;
 }
 
 .gallerySectionContent {

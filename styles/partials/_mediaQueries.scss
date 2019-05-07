@@ -2,35 +2,57 @@
 // MEDIA QUERIES
 // MEDIA QUERIES
 
+
+@media (min-width: 1100px){
+    .mainHeader {
+        height: 650px;
+    }
+
+    .mainHeader h1 {
+        bottom: -460px;
+        font-size: 120px;
+    }
+
+    //Month Profile section
+
+    .monthProfileSection {
+        height: 600px;
+    }
+}
+
 @media (max-width: 950px) {
 
     //HEADER SECTION
 
-    .whatIsCapturedSection {
-        padding: 80px 0;
+    nav ul {
+        top: 10px;
     }
-
+    
     .mainHeader h1 {
         bottom: -70px;
         font-size: 6vw;
         text-align: right;
         margin-right: 50px;
     }
-
+    
     .headerLensImageContainer {
-        width: 30%;
+        width: 40%;
         min-width: 250px;
-        bottom: -200px;
         border-width: 20px 0 20px 20px;
+        bottom: -14%;
     }
-
+    
+    //what is captured section
+    .whatIsCapturedSection {
+        padding: 80px 0;
+    }
 }
 
 @media (max-width: 750px) {
 
     body {
         //Background color matching header image
-        background-color: #F3F5F4;
+        background-color: #F3F3F3;
     }
 
     //HEADER SECTION
@@ -38,6 +60,10 @@
     .mainHeader {
         background-position: 5%;
         margin-top: 80px;
+    }
+
+    nav ul {
+        right: 10px;
     }
 
     .mainHeader h1 {
@@ -64,6 +90,73 @@
         margin-bottom: 30px;
     }
 
+    //SKILLS AND GEAR QUADRANT SECTION
+
+    .skillsAndGearContent {
+        flex-direction: column;
+    }
+
+    .skillsAndGearQuadrant {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+        margin: 35px 0;
+    }
+
+    .quadTextWrapper {
+        margin: 0 auto;
+    }
+
+    .textQuadLowerLeft .quadTextWrapper {
+        text-align: center;
+    }
+
+    //Icon Quadrants section (The one with the font awesome icons)
+
+    .iconQuadSection {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .iconQuadContent {
+        width: 85%;
+        margin: 15px 0;
+    }
+
+    //Month Profile Section
+
+    .monthProfileSection {
+        height: auto;
+    }
+
+    .monthProfileContent {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    
+    .profileImageContainer {
+        width: 50%;
+        padding: 30px 0;
+    }
+
+    .profileTextWrapper {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    //Gallery Section
+
+    .galleryImageWrapper{
+        width: 48%;
+    }
+
+    .galleryImageWrapper:nth-of-type(2){
+        display: none;
+    }
+
+
 }
 
 @media (max-width: 550px) {
@@ -72,8 +165,11 @@
 
     .mainHeader {
         background-image: url("../../images/header-box-image.jpg");
-        background-size: contain;
+        background-size: cover;
         margin: 0;
+        background-color: #F3F3F3;
+        background-position: 100%;
+
     }
 
     nav ul {
@@ -82,7 +178,82 @@
 
     .mainHeader h1 {
         bottom: 0;
-        top: 50px;
+        top: 40px;
+        text-align: left;
+        margin-left: 15px;
     }
 
+    .hamburgerMenu.fas {
+        display: block;
+    }
+
+    //What is captured section
+
+    .whatIsCapturedSection {
+        padding: 50px 0 50px 0;
+    }
+
+    //Skills and gear section
+
+    .skillsAndGearQuadrant {
+        margin: 15px 0;
+    }
+
+    //banner section hides at this width
+
+    .midImageBannerSection {
+        display: none;
+    }
+
+    //Month Profile Section
+
+    .monthProfileSection {
+        height: auto;
+    }
+
+    //Gallery Section
+
+    .gallerySectionContent {
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .galleryImageWrapper{
+        width: 85%;
+    }
+
+    .galleryImageWrapper:nth-of-type(2){
+        display: block;
+    }
+
+    .galleryImageWrapper:nth-of-type(2n + 1){
+        display: none;
+    }
+
+    @media (max-width: 380px) {
+        //For very small screens
+        .mainHeader h1 {
+            font-size: 40px;
+            margin-left: 10px;
+        }
+
+        .hamburgerMenu.fas {
+            font-size: 40px;
+            top: 48px;
+            right: 20px;
+        }
+
+        //Month Profile image
+        .profileImageContainer {
+            width: 80%;
+        }
+
+        .profileImageContainer img {
+            box-shadow: none;
+        }
+
+        .profileTextWrapper {
+            padding-top: 0;
+        }
+    }
 }
