@@ -160,7 +160,8 @@ body {
   right: 30px;
   display: none; }
 
-a:focus {
+a:focus,
+button:focus {
   border: 4px dotted red; }
 
 a.skipMain {
@@ -480,7 +481,10 @@ nav a:hover {
 .aboutWrapper {
   width: 28%;
   line-height: 1.5;
-  margin-top: 40px; }
+  margin-top: 40px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1; }
 
 .aboutText {
   margin-left: 55px;
@@ -523,7 +527,10 @@ nav a:hover {
   width: 65%;
   position: relative;
   top: -150px;
-  margin-right: 30px; }
+  margin-right: 30px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
 
 .blogTextWrapper {
   width: 90%;
@@ -571,7 +578,8 @@ nav a:hover {
   margin: 15px 0;
   font-size: 20px; }
 
-.inputField:hover {
+.inputField:hover,
+.inputField:focus {
   background: rgba(211, 134, 211, 0.2); }
 
 .nameInputField,
@@ -608,7 +616,10 @@ nav a:hover {
   background-color: #effdf3; }
 
 .sideInfoWrapper {
-  width: 25%; }
+  width: 25%;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1; }
 
 .contactText {
   position: relative;
@@ -638,7 +649,10 @@ nav a:hover {
   -webkit-box-shadow: -30px 30px 0 0 #fdfa69;
   box-shadow: -30px 30px 0 0 #fdfa69;
   position: relative;
-  top: -160px; }
+  top: -160px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
 
 .inTouchTextWrapper {
   width: 90%;
@@ -805,6 +819,10 @@ nav a:hover {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .blogContent {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
   .aboutWrapper img {
     display: none; }
   .aboutWrapper {
@@ -845,7 +863,10 @@ nav a:hover {
   .headerNavMenu.inTouchNavMenu li {
     display: inline; }
   .getInTouchFormWrapper {
-    width: 80%; }
+    width: 80%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
   .getInTouchFormWrapper h3 {
     font-size: 40px; }
   .inTouchContentWrapper {

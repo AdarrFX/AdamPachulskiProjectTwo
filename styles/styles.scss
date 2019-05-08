@@ -32,7 +32,8 @@ body {
 }
 
 //large focus border for accessibility
-a:focus {
+a:focus,
+button:focus {
     border: 4px dotted red;
 }
 
@@ -384,6 +385,7 @@ nav a:hover {
     width: 28%;
     line-height: 1.5;
     margin-top: 40px;
+    order: 1;
 }
 
 .aboutText{
@@ -437,6 +439,7 @@ $blogImageOffset: 30px;
     position: relative;
     top: -150px;
     margin-right: $blogImageOffset;
+    order: 2;
 }
 
 .blogTextWrapper {
@@ -491,7 +494,8 @@ $blogImageOffset: 30px;
     font-size: 20px;
 }
 
-.inputField:hover {
+.inputField:hover,
+.inputField:focus {
     background: rgba(211, 134, 211, 0.2);
 }
 
@@ -538,6 +542,7 @@ $blogImageOffset: 30px;
 
 .sideInfoWrapper {
     width: 25%;
+    order: 1;
 }
 
 .contactText {
@@ -573,6 +578,7 @@ $blogImageOffset: 30px;
     box-shadow: -$blogImageOffset $blogImageOffset 0 0 $canary;
     position: relative;
     top: -160px;
+    order: 2;
 }
 
 .inTouchTextWrapper {
