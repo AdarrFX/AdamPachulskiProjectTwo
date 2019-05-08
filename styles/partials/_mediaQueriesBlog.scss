@@ -35,10 +35,20 @@
 
     .postComment {
         flex-direction: column;
+        width: 100%;
     }
 
     .nameInputField,
     .emailInputField {
         width: 100%;
+        text-align: center;
+    }
+
+    .commentInputField {
+        text-align: center;
+    }
+
+    .postCommentButton {
+        width: 95%;
     }
 }

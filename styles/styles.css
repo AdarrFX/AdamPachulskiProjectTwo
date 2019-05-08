@@ -181,6 +181,9 @@ h4 {
 p {
   font-family: 'Roboto', serif; }
 
+a i {
+  color: #2c2c2c; }
+
 .findOutMoreButton {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -502,6 +505,9 @@ nav a:hover {
 .blogTitleHeading {
   padding-top: 30px; }
 
+.blogCommentsWrapper {
+  padding-top: 20px; }
+
 .blogComment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,11 +552,15 @@ nav a:hover {
 .commentInputField {
   width: 100%;
   height: 200px;
-  border: 3px solid #4ceea7; }
+  border: 3px solid #4ceea7;
+  resize: none; }
 
 .postCommentButton {
   width: 100%;
   border: none; }
+
+.wideWrapperBlog {
+  min-height: 95vh; }
 
 .inTouchHeader {
   background-image: url(../images/contact-header.jpg);
@@ -787,7 +797,57 @@ nav a:hover {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   .nameInputField,
   .emailInputField {
-    width: 100%; } }
+    width: 100%;
+    text-align: center; }
+  .commentInputField {
+    text-align: center; }
+  .postCommentButton {
+    width: 95%; } }
+
+@media (max-width: 950px) {
+  .headerNavMenu.inTouchNavMenu {
+    top: 50px; } }
+
+@media (max-width: 750px) {
+  .headerNavMenu.inTouchNavMenu li {
+    display: inline; }
+  .getInTouchFormWrapper {
+    width: 80%; }
+  .getInTouchFormWrapper h3 {
+    font-size: 40px; }
+  .inTouchContentWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .postMessage input {
+    font-size: 18px; }
+  .sideInfoWrapper {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 80%;
+    text-align: center;
+    margin-top: -150px;
+    margin-bottom: 100px; } }
+
+@media (max-width: 550px) {
+  .getInTouchFormWrapper {
+    height: auto;
+    padding-bottom: 30px;
+    width: 85%; }
+  .getInTouchFormWrapper h3 {
+    text-align: center; }
+  .nameInputField,
+  .emailInputField {
+    width: 100%;
+    text-align: center; }
+  .commentInputField {
+    text-align: center; } }

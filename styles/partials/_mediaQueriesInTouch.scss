@@ -1,0 +1,65 @@
+@media (max-width: 950px) {
+
+    .headerNavMenu.inTouchNavMenu {
+        //Override default behaviour of menu from index page
+        top: 50px;
+    }
+}
+
+@media (max-width: 750px){
+
+    .headerNavMenu.inTouchNavMenu li {
+        //Override default behaviour of menu from index page
+        display: inline;
+    }
+
+    .getInTouchFormWrapper {
+        width: 80%;
+    }
+
+    .getInTouchFormWrapper h3 {
+        font-size: 40px;
+    }
+
+    .inTouchContentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .postMessage input {
+        font-size: 18px;
+    }
+
+    .sideInfoWrapper {
+        order: 2;
+        width: 80%;
+        text-align: center;
+        margin-top: -150px;
+        margin-bottom: 100px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .getInTouchFormWrapper {
+        height: auto;
+        padding-bottom: 30px;
+        width: 85%;
+    }
+
+    .getInTouchFormWrapper h3 {
+        text-align: center;
+    }
+
+    .nameInputField,
+    .emailInputField {
+        width: 100%;
+        text-align: center;
+    }
+
+    .commentInputField {
+        text-align: center;
+    }
+
+}
