@@ -117,9 +117,6 @@ nav a:hover {
     width: 40%;
     min-width: 370px;
     max-width: 620px;
-    // float: right;
-    // position: relative;
-    // bottom: -70px;
     position: absolute;
     bottom: -23%;
     right: 0;
@@ -218,6 +215,7 @@ nav a:hover {
 .quadSectionWrapper {
     display: flex;
     flex-wrap: wrap;
+    padding: 60px 0;
 }
 
 .iconQuadContent {
@@ -319,6 +317,11 @@ nav a:hover {
 //BLOG POST PAGE
 //BLOG POST PAGE
 //BLOG POST PAGE
+
+.fullBlogPageWrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
 .blogHeader {
     background-image: url("../images/blog-header.jpg");
@@ -537,3 +540,4 @@ $blogImageOffset: 30px;
 // MEDIA QUERIES
 
 @import "partials/mediaQueriesIndex";
+@import "partials/mediaQueriesBlog";

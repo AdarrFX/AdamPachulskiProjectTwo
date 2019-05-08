@@ -327,7 +327,8 @@ nav a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 60px 0; }
 
 .iconQuadContent {
   width: 50%;
@@ -421,6 +422,10 @@ nav a:hover {
   color: white;
   text-align: center;
   padding: 12px; }
+
+.fullBlogPageWrapper {
+  max-width: 1600px;
+  margin: 0 auto; }
 
 .blogHeader {
   background-image: url("../images/blog-header.jpg");
@@ -751,3 +756,38 @@ nav a:hover {
     box-shadow: none; }
   .profileTextWrapper {
     padding-top: 0; } }
+
+@media (max-width: 750px) {
+  .blogContentWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .aboutWrapper img {
+    display: none; }
+  .aboutWrapper {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 90%; }
+  .aboutText {
+    background: none;
+    text-align: center;
+    margin: 0; }
+  .blogContent {
+    margin: 0;
+    width: 80%;
+    margin-bottom: -150px; } }
+
+@media (max-width: 550px) {
+  .postComment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .nameInputField,
+  .emailInputField {
+    width: 100%; } }

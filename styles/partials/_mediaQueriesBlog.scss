@@ -1,0 +1,44 @@
+@media (max-width: 750px) {
+    
+    .blogContentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    //About aside section
+    
+    .aboutWrapper img {
+        display: none;
+    }
+
+    .aboutWrapper {
+        order: 2;
+        width: 90%;
+    }
+    
+    .aboutText {
+        background: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    //Blog content
+
+    .blogContent {
+        margin: 0;
+        width: 80%;
+        margin-bottom: -150px; //counteracts the blank space created when the image and blog post are shifted upwards
+    }
+}
+
+@media (max-width: 550px) {
+
+    .postComment {
+        flex-direction: column;
+    }
+
+    .nameInputField,
+    .emailInputField {
+        width: 100%;
+    }
+}
