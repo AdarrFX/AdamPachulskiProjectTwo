@@ -31,6 +31,11 @@ body {
     display: none;
 }
 
+//large focus border for accessibility
+a:focus {
+    border: 5px dotted red;
+}
+
 h1,
 h2,
 h3,
@@ -73,7 +78,7 @@ a i {
     height: 500px;
     width: 100%;
     // max-width: 1600px;
-    background-image: url("../images/header-image.jpg");
+    background-image: url("../images/headerImage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $ice;
@@ -328,7 +333,7 @@ nav a:hover {
 }
 
 .blogHeader {
-    background-image: url("../images/blog-header.jpg");
+    background-image: url("../images/blogHeader.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -486,7 +491,7 @@ $blogImageOffset: 30px;
 }
 
 .inTouchHeader {
-    background-image: url(../images/contact-header.jpg);
+    background-image: url("../images/contactHeader.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
